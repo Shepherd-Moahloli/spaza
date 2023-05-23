@@ -44,14 +44,27 @@ const formOrder = document.getElementById("order");
 formOrder.addEventListener("submit", function (event) {
   event.preventDefault();
   formOrder.reset();
+
+  let dijo = starch.options[starch.options.selectedIndex].innerText;
+  dijo += ", " + meat.options[meat.options.selectedIndex].innerText;
+
+  const anOrder = (
+    <li class="order">
+      <p class="order-number">${Math.round(Math.random() * 4)}</p>
+      <p>${dijo}</p>
+      <p>
+        <button class="go-button">GO</button>
+      </p>
+    </li>
+  );
+
+  const listOrder = document.createElement("li");
+  listOrder.innerHTML = anOrder;
+  listOrder.classList.add("order");
+  document.getElementById("orders").appendChild(listOrder);
+  console.log(dijo);
 });
 
 function processOrder(event) {
   event.preventDefault();
-
-  if (document.getElementById("change").value < 0) {
-    alert("You need more money!");
-  } else {
-    alert("Thank you for your order");
-  }
 }

@@ -15,6 +15,13 @@ body a:hover {
   color: blue;
 }
 
+section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 main#app h1 {
   font-size: 2rem;
 }
@@ -78,4 +85,47 @@ main#app form p:last-child label input {
   flex-grow: 1;
   max-width: 100%;
   min-width: 3ch;
+}
+main#kitchen {
+  margin: 2rem auto 0 auto;
+  max-width: 80vw;
+  min-width: 40vw;
+  padding: 20px;
+  background-color: #fff;
+  border-top-right-radius: 0.4rem;
+  border-top-left-radius: 0.4rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  bottom: 0;
+}
+
+main#kitchen ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+main#kitchen ol li {
+  padding: 0.5rem;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  gap: 2rem;
+}
+
+main#kitchen ol li span {
+  width: 6ch;
+  aspect-ratio: 1;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+}
+main#kitchen ol li p {
+  flex-grow: 1;
+  background-color: red;
+}
+main#kitchen ol li p:last-child {
+  flex-shrink: 1;
+  background-color: blue;
+  flex-grow: 0;
 }

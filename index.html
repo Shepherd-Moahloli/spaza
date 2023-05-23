@@ -8,42 +8,66 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <main id="app">
-      <h1><a href="/">SPAZA</a></h1>
-      <form id="order">
-        <p>
-          <select name="" id="meat">
-            <option value="24">Kgomo</option>
-            <option value="14">Kolobe</option>
-            <option value="34">Nku</option>
-            <option value="8">Kgogo</option>
-          </select>
-          <input readonly id="meat-cost" value="0" class="cost" />
-        </p>
-        <p>
-          <select name="" id="starch">
-            <option value="6">Bogobe</option>
-            <option value="12">Rice</option>
-            <option value="16">Stampa</option>
-          </select>
-          <input readonly id="starch-cost" value="0" class="cost" />
-        </p>
-        <p>
-          <label>
-            <span>Total</span>
-            <input readonly id="total" value="0" />
-          </label>
-          <label>
-            <span>Paid</span>
-            <input id="paid" value="0" />
-          </label>
-          <label>
-            <span>Change</span>
-            <input readonly id="change" value="0" />
-          </label>
-        </p>
-      </form>
-    </main>
+    <section>
+      <main id="app">
+        <h1><a href="/">SPAZA</a></h1>
+        <form id="order">
+          <p>
+            <select name="" id="meat">
+              <option value="24">Kgomo</option>
+              <option value="14">Kolobe</option>
+              <option value="34">Nku</option>
+              <option value="8">Kgogo</option>
+            </select>
+            <input readonly id="meat-cost" value="0" class="cost" />
+          </p>
+          <p>
+            <select name="" id="starch">
+              <option value="6">Bogobe</option>
+              <option value="12">Rice</option>
+              <option value="16">Stampa</option>
+            </select>
+            <input readonly id="starch-cost" value="0" class="cost" />
+          </p>
+          <p>
+            <label>
+              <span>Total</span>
+              <input readonly id="total" value="0" />
+            </label>
+            <label>
+              <span>Paid</span>
+              <input id="paid" value="0" />
+            </label>
+            <label>
+              <span>Change</span>
+              <input readonly id="change" value="0" />
+            </label>
+          </p>
+        </form>
+      </main>
+
+      <main id="kitchen">
+        <h1>Order</h1>
+        <ol id="orders">
+          <li id="order">
+            <span class="order-number">#888</span>
+            <p>Meat, Starch</p>
+            <p>COMPLETE</p>
+          </li>
+          <li id="order">
+            <span class="order-number">#888</span>
+            <p>Meat, Starch</p>
+            <p>COMPLETE</p>
+          </li>
+          <li id="order">
+            <span class="order-number">#888</span>
+            <p>Meat, Starch</p>
+            <p>COMPLETE</p>
+          </li>
+        </ol>
+      </main>
+    </section>
+
     <script defer src="js/main.js"></script>
   </body>
 </html>

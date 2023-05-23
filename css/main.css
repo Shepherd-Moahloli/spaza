@@ -19,6 +19,7 @@ section {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  /* place last item to the bottom */
   justify-content: space-between;
 }
 
@@ -28,13 +29,32 @@ main#app h1 {
 
 main#app {
   margin: 0 auto;
-  max-width: 80vw;
+  width: 80vw;
   min-width: 40vw;
   padding: 20px;
   background-color: #fff;
   border-bottom-right-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+main#kitchen {
+  background-color: blue;
+  /*
+  */
+  width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 40vw;
+  padding: 20px;
+  background-color: #fff;
+  border-top-right-radius: 0.4rem;
+  border-top-left-radius: 0.4rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+main#app form#order.hide {
+  display: none;
 }
 
 main#app form p {
@@ -50,6 +70,10 @@ main#app form p select {
   flex-grow: 1;
 }
 
+main#app form p select option {
+  padding: 0 0.8rem;
+}
+
 main#app form p input {
   font-size: 1.2rem;
   padding: 0.5rem;
@@ -58,7 +82,7 @@ main#app form p input {
   text-align: right;
   flex-grow: 0;
   flex-shrink: 4;
-  flex-basis: 3ch;
+  width: 3ch;
 }
 main#app form p:last-child {
   display: flex;
@@ -83,8 +107,7 @@ main#app form p:last-child label {
 main#app form p:last-child label input {
   flex-shrink: 4;
   flex-grow: 1;
-  max-width: 100%;
-  min-width: 3ch;
+  width: auto;
 }
 
 main#app form p:last-child label button {
@@ -102,18 +125,10 @@ main#app form p:last-child label button {
   transition: background-color 0.2s ease-in-out;
 }
 
-main#kitchen {
-  margin: 2rem auto 0 auto;
-  max-width: 80vw;
-  min-width: 40vw;
-  padding: 20px;
-  background-color: #fff;
-  border-top-right-radius: 0.4rem;
-  border-top-left-radius: 0.4rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  bottom: 0;
+main#app form p:last-child label button:hover {
+  background-color: #333;
+  color: #fff;
 }
-
 main#kitchen ol {
   list-style: none;
   padding: 0;
@@ -121,13 +136,20 @@ main#kitchen ol {
 }
 
 main#kitchen ol li {
+  margin: 0;
+  padding: 0;
   display: flex;
-  border-bottom: 0.4px solid #ccc;
-  justify-content: space-between;
+  border-bottom: 0.2rem solid #f0f0f0;
   margin-bottom: 0.4rem;
   padding: 0.4rem 0;
-  font-size: 1.2rem;
+
+  justify-content: space-between;
   gap: 2rem;
+  font-size: 1.4rem;
+  /*
+  place-content: start;
+  background-color: green;
+  */
   place-items: center;
 }
 
@@ -152,13 +174,9 @@ main#kitchen ol li p button:hover {
   background-color: #333;
   color: #fff;
 }
+
 /*
 main#kitchen ol li span {
-  width: 6ch;
-  aspect-ratio: 1;
-  font-weight: bold;
-  display: block;
-  text-align: center;
 }
 main#kitchen ol li p {
   flex-grow: 1;

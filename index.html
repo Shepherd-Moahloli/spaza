@@ -13,7 +13,7 @@
         <h1><a href="/">SPAZA</a></h1>
         <form id="order">
           <p>
-            <select name="" id="meat">
+            <select name="meat" id="meat">
               <option value="24">Kgomo</option>
               <option value="14">Kolobe</option>
               <option value="34">Nku</option>
@@ -22,7 +22,7 @@
             <input readonly id="meat-cost" value="0" class="cost" />
           </p>
           <p>
-            <select name="" id="starch">
+            <select name="starch" id="starch">
               <option value="6">Bogobe</option>
               <option value="12">Rice</option>
               <option value="16">Stampa</option>
@@ -44,31 +44,15 @@
             </label>
             <label>
               <span>Place</span>
-              <button id="submit">ORDER</button>
-          </label>
+              <button id="submit-order" type="submit">ORDER</button>
+            </label>
           </p>
         </form>
       </main>
 
       <main id="kitchen">
-        <h1>Order</h1>
-        <ol id="orders">
-          <li id="order">
-            <span class="order-number">#888</span>
-            <p>Meat, Starch</p>
-            <p><button class="go-button">GO</button></p></p>
-          </li>
-          <li id="order">
-            <span class="order-number">#888</span>
-            <p>Meat, Starch</p>
-            <p><button class="go-button">GO</button></p>
-          </li>
-          <li id="order">
-            <span class="order-number">#888</span>
-            <p>Meat, Starch</p>
-            <p><button class="go-button">GO</button></p>
-          </li>
-        </ol>
+        <!-- list of orders places -->
+        <ol id="orders"></ol>
       </main>
     </section>
 

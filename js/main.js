@@ -41,8 +41,13 @@ formOrder.addEventListener("submit", function (event) {
   // get the selected option for starch
   let dijo = starch.options[starch.options.selectedIndex].innerText;
   dijo += ", " + meat.options[meat.options.selectedIndex].innerText;
+  // get select selectedIndex
 
-  console.log(starch.options.selectedIndex, meat.options.selectedIndex);
+  console.log(
+    starch.options.selectedIndex,
+    meat.options.selectedIndex,
+    meat.selectedIndex
+  );
 
   const anOrder = `
             <p class="order-number">${Math.round(Math.random() * 1000)}</p>

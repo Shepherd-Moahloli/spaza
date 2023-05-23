@@ -1,0 +1,81 @@
+body {
+  background-color: #f0f0f0;
+  color: #333;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  margin: 0;
+}
+body a {
+  text-decoration: none;
+  color: #aaa;
+  transition: color 0.2s ease-in-out;
+}
+
+body a:hover {
+  color: blue;
+}
+
+main#app h1 {
+  font-size: 2rem;
+}
+
+main#app {
+  margin: 0 auto;
+  max-width: 80vw;
+  min-width: 40vw;
+  padding: 20px;
+  background-color: #fff;
+  border-bottom-right-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+main#app form p {
+  display: flex;
+  gap: 1rem;
+  background-color: #e8e8e8;
+  border-radius: 0.4rem;
+  padding: 1rem;
+}
+
+main#app form p select {
+  font-size: 1.2rem;
+  flex-grow: 1;
+}
+
+main#app form p input {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  border: 1px solid #333;
+  border-radius: 0.2rem;
+  text-align: right;
+  flex-grow: 0;
+  flex-shrink: 4;
+  flex-basis: 3ch;
+}
+main#app form p:last-child {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: pink;
+}
+main#app form p:last-child span {
+  flex-grow: 1;
+  text-align: right;
+  padding-right: 1rem;
+  font-size: 1.1rem;
+  font-style: italic;
+  display: inline-block;
+  margin-bottom: 0.2rem;
+}
+main#app form p:last-child label {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+main#app form p:last-child label input {
+  flex-shrink: 4;
+  flex-grow: 1;
+  max-width: 100%;
+  min-width: 3ch;
+}

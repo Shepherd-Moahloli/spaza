@@ -38,3 +38,20 @@ function runThisTown() {
 }
 
 runThisTown();
+
+const formOrder = document.getElementById("order");
+
+formOrder.addEventListener("submit", function (event) {
+  event.preventDefault();
+  formOrder.reset();
+});
+
+function processOrder(event) {
+  event.preventDefault();
+
+  if (document.getElementById("change").value < 0) {
+    alert("You need more money!");
+  } else {
+    alert("Thank you for your order");
+  }
+}
